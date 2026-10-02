@@ -43,3 +43,31 @@ What is one security property provided by signing that encryption does not inclu
 
 5)
 Explain in two sentences why the much smaller Ed25519 key is not necessarily the weaker key: While RSA is based on multiplication, Ed is based on group theory and hence has much more complexity stuffed in a smaller package.This is also because it achieves similar results to RSA with a shorter keys and faster computations in terms of security level.
+
+7.2
+1) 
+What is wrong? Uses pkcs7 padding (default)
+What could an attacker do because of it? Using a pad oracle attack, they could extract the plaintext
+Which lecture concept does the defect violate. In essence, its a crib. Its info the attacker may know is in the text and hence can use to decrypt it, which is similar to leaking the IV but at the end of the text instead of the front. 
+2)
+What is wrong? Its not actually. *doing* CBC I think??? Its just sequencially encrypting blocks in isolation. Its not really *Chaining* anything???
+What could an attacker do because of it? If my assumption is correct they could break this like ECB?
+Which lecture concept does the defect violate. Using a CBC properly????
+3)
+What is wrong? It doesnt encrypt the IV
+What could an attacker do because of it? They know exactly what IV you used lmao
+Which lecture concept does the defect violate. Keeping the IV/random string secret.
+
+7.3)
+1)
+What you changed. Nothing
+Why you changed it. I can't, its inheirent to CBC as a method of encryption
+Which security problem each change addresses.The weaknesses of CBC, one of which is the end padding to make up the missing room.
+2)
+What you changed. Got rid of the stupid while loop, unnecessary.
+Why you changed it. It wasnt actually Pushing through the text to the next step of the CBC. It was just individually doing every chunk for no reason.
+Which security problem each change addresses. Knowing how CBC works?? faulty aspects of AI.
+3)
+What you changed. Let the encryption function handle it
+Why you changed it. It was just pushing the IV at the front and not actually encrypting it.
+Which security problem each change addresses. Hiding the IV and not letting attackers have the random number.

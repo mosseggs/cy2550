@@ -1,5 +1,4 @@
 FOR PUZZLE 1)
-Plaintext:
 I got a jar of dirt
 
 Steps:
@@ -20,9 +19,7 @@ Direction (Cipher's direction): From From From From.
 
 
 FOR PUZZLE 2)
-
-Plaintext:
-
+NOT ALL TREASURES SILVER AND GOLD MATE
 
 Steps:
 1) Number substitution:
@@ -38,6 +35,6 @@ Direction:
 Idk if this means what was my direction or in which direction the cipher was used
 so ill do both
 Direction (why i did what i did): I figured out the obvious letter -> number sub bc obvious hint is obvious. 
-The Caeser box was something I *looked* at but didn't think was right since it seemed to require a proper grid as well as well as not seeming to have anything to do with numbers. dCode identifier was also pointing me towards Nihilist cipher.
+The Caeser box was something I *looked* at but didn't think was right since it seemed to require a proper grid as well as well as not seeming to have anything to do with numbers. dCode identifier was also pointing me towards Nihilist cipher. I got this because a TA told me to look at ciphers relating to Boxes. Tbf with 5x5 being classic cipher, choosing 5"wide as a clue is devious.
 The Multitap SMS was obvious, since thats the only "phone cipher" that exists, and atbash is atbash.
 Direction (Cipher's direction): From, From, From, From
