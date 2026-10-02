@@ -17,7 +17,8 @@ def encrypt_file(input_file_path: str, output_file_path: str, key: bytes, chunk_
         raise ValueError("Key must be exactly 32 bytes long for AES-256.")
 
     # Um actually the command can do that for you
-    cipher = AES.new(key, AES.MODE_CBC);
+    iv = os.urandom(16)
+    cipher = AES.new(key, AES.MODE_CBC, iv)
 
     # 4. Open and process the files
     with open(input_file_path, 'rb') as infile, open(output_file_path, 'wb') as outfile:
